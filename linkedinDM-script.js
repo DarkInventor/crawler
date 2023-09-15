@@ -527,7 +527,7 @@ const rl = readline.createInterface({
     // You may need to handle login here if cookies are not enough
 
     let maxIndex = 200; // Set your desired maximum index
-    let currentIndex = 5;
+    let currentIndex = 2;
 
     while (currentIndex < maxIndex) {
       // Scroll down to load more members
@@ -573,11 +573,15 @@ const rl = readline.createInterface({
         await page.waitForTimeout(3000);
         
         // Enable while sending only
+
+        // 1
         // await page.click('button.msg-form__send-button');
         
-        await page.waitForTimeout(3000);
+        // 2
+        // await page.waitForTimeout(3000);
 
         // Close the message window
+        // 3
         await page.click('li-icon[type="close"][size="small"]');
 
         await page.waitForTimeout(3000);
@@ -601,3 +605,6 @@ const rl = readline.createInterface({
     rl.close();
   }
 })();
+
+
+
